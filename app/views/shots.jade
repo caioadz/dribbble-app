@@ -2,11 +2,11 @@ extends ./layout.jade
 
 block content
 
-	//Most popular shots (must be authenticated)
+	//Most popular shots	
 	div(ng-controller='ShotsCtrl')
 		div(class='col-sm-2' ng-repeat='shot in shots' ng-cloak)
-			a(ng-click='openModal()' class='thumbnail')
-				img(src='{{ shot.images.normal }}' alt='Rolling')
+			a(ng-click='openModal($index)' class='thumbnail')
+				img(ng-src='{{ shot.images.normal }}')
 				div(class='caption')
 					span(class="glyphicon glyphicon-heart")
 					| {{ shot.likes_count || 0 }}

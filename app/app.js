@@ -6,6 +6,7 @@ angular.module('app', [
 	'ngResource',
 	'Dribbble',
 	'Shots',
+	'Details',
 	'ui.bootstrap'
 ])
 

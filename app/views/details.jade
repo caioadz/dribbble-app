@@ -1,13 +1,10 @@
-
-
 div(class='container details')
 	div(class='title')
-		h3 Building
+		h3 {{ shot.title }}
 	div(class='image')
-		img(src="images/pois_1x.png" class="img-responsive")
+		img(ng-src="{{ shot.images.hidpi }}" class="img-responsive")
 	div(class='author')
-		img(src="images/perfil.jpg" class="img-circle")
-		span Caio Araújo de Zem
+		img(ng-src="{{ shot.user.avatar_url }}" class="img-circle")
+		span {{ shot.user.name }}
 	div(class='description')
-		span.
-			Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah Blah blah blah 
+		span(ng-bind-html='shot.description')
