@@ -5,7 +5,7 @@ angular.module('Shots', ['ngRoute'])
 .controller('ShotsCtrl', function(ShotsResource, $scope, $uibModal) {
 	$scope.shots = [];
 	
-	/*$scope.shots.push({
+	$scope.shots.push({
 		likes_count: 100,
 		views_count: 300,
 		comments_count: 1000,
@@ -20,11 +20,11 @@ angular.module('Shots', ['ngRoute'])
 			name: "Aurélien Salomon ➔",
 			avatar_url: "https://d13yacurqjgara.cloudfront.net/users/30252/avatars/normal/a8b7eb3a7c2e5a535337f44fa0bda235.png?1421609695",
 		},
-	});*/
-	
-	ShotsResource.query().$promise.then(function(data) {
-		$scope.shots = data;
 	});
+	
+	/*ShotsResource.query().$promise.then(function(data) {
+		$scope.shots = data;
+	});*/
 	
 	$scope.openModal = function (index) {
 		$uibModal.open({
