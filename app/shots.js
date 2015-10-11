@@ -28,7 +28,9 @@ angular.module('Shots', ['ngRoute'])
 		comments: 1
 	});
 	
-	$scope.shots = ShotsResource.query();
+	ShotsResource.query().$promise.then(function(data) {
+		console.log(data);
+	});
 	
 	$scope.openModal = function () {
 		$modal.open({templateUrl: 'details'});
