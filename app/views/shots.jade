@@ -9,8 +9,8 @@ block content
 				img(src='images/pois_1x.png' alt='Rolling')
 				div(class='caption')
 					span(class="glyphicon glyphicon-heart")
-					| {{ shot.likes || 0 }}
+					| {{ shot.likes_count || 0 }}
 					span(class="glyphicon glyphicon-eye-open")
-					| {{ shot.views || 0 }}
+					| {{ shot.views_count || 0 }}
 					span(class="glyphicon glyphicon-comment")
-					| {{ shot.comments || 0 }}
+					| {{ shot.comments_count || 0 }}
