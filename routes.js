@@ -8,6 +8,10 @@ module.exports = function(app) {
 		res.render('details');
 	});
 	
+	app.get('/auth', function(req, res, next) {
+		res.render('auth');
+	});
+	
 	app.get('/401', function(req, res, next) {
 		res.render('error/401');
 	});

@@ -6,7 +6,7 @@ angular.module('Shots', ['ngRoute'])
 	
 }])
 
-.controller('ShotsCtrl', function($scope, $modal) {
+.controller('ShotsCtrl', function($scope, $modal, $location, $http) {
 	
 	$scope.shots = [];
 	
@@ -23,13 +23,17 @@ angular.module('Shots', ['ngRoute'])
 	});
 	
 	$scope.shots.push({
-		likes: 10,
+		likes: 5,
 		views: 50,
 		comments: 1
 	});
 	
-	$scope.openModal = function () {
+	$scope.code = $location.search()['code'];
+	if ($scope.code) {
 		$modal.open({templateUrl: 'details'});
 	}
 	
+	$scope.openModal = function () {
+		$modal.open({templateUrl: 'details'});
+	}
 });

@@ -1,7 +1,9 @@
 extends ./layout.jade
 
 block content
-	div(ng-controller='ShotsCtrl')
+
+	//Most popular shots (must be authenticated)
+	div(ng-controller='ShotsCtrl' ng-show='authenticated')
 		div(class='col-sm-2' ng-repeat='shot in shots' ng-cloak)
 			a(ng-click='openModal()' class='thumbnail')
 				img(src='images/pois_1x.png' alt='Rolling')
@@ -12,3 +14,7 @@ block content
 					| {{ shot.views || 0 }}
 					span(class="glyphicon glyphicon-comment")
 					| {{ shot.comments || 0 }}
+	
+	//Signin				
+	div(ng-controller='AuthCtrl' ng-show='!authenticated')
+		include ./error/401.jade
