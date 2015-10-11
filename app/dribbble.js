@@ -6,7 +6,11 @@ var api_url = '//api.dribbble.com/v1{relative_url}?access_token=' + client_id;
 angular.module('Dribbble', [])
 
 .factory('ShotsResource', function ($resource) {
-	return $resource(BuildUrl('/shots/:id'));
+	return $resource(BuildUrl('/shots/:id'), {}, {
+		query: {
+			cache: true
+		}
+	});
 });
 
 function BuildUrl(relative_url) {
