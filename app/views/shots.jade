@@ -1,0 +1,14 @@
+extends ./layout.jade
+
+block content
+	div(ng-controller='ShotsCtrl')
+		div(class='col-sm-2' ng-repeat='shot in shots' ng-cloak)
+			a(ng-click='openModal()' class='thumbnail')
+				img(src='images/pois_1x.png' alt='Rolling')
+				div(class='caption')
+					span(class="glyphicon glyphicon-heart")
+					| {{ shot.likes || 0 }}
+					span(class="glyphicon glyphicon-eye-open")
+					| {{ shot.views || 0 }}
+					span(class="glyphicon glyphicon-comment")
+					| {{ shot.comments || 0 }}

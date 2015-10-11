@@ -1,0 +1,17 @@
+body { 
+    padding-top: 70px; 
+}
+.thumbnail:hover {
+    text-decoration: none;
+}
+.thumbnail .caption {
+    padding: 3px;
+    color: #aaa;
+    font-size: 11px;
+}
+.thumbnail .caption .glyphicon {
+    padding-left: 6px;
+}
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}

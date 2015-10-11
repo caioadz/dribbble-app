@@ -1,0 +1,11 @@
+{
+  "name": "concreteapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.13.3",
+    "jade": "^1.11.0"
+  },
+  "author": "Caio Zem"
+}
