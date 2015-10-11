@@ -3,7 +3,7 @@ extends ./layout.jade
 block content
 
 	//Most popular shots (must be authenticated)
-	div(ng-controller='ShotsCtrl' ng-show='authenticated')
+	div(ng-controller='ShotsCtrl')
 		div(class='col-sm-2' ng-repeat='shot in shots' ng-cloak)
 			a(ng-click='openModal()' class='thumbnail')
 				img(src='images/pois_1x.png' alt='Rolling')
