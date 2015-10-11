@@ -6,7 +6,8 @@ block content
 	div(ng-controller='ShotsCtrl')
 		div(class='col-sm-2' ng-repeat='shot in shots' ng-cloak)
 			a(ng-click='openModal($index)' class='thumbnail')
-				img(ng-src='{{ shot.images.normal }}')
+				img(ng-src='{{ shot.images.teaser }}' ng-show='hoverIn' ng-mouseover="hoverIn != hoverIn")
+				img(ng-src='{{ shot.images.normal }}' ng-show='hoverIn' ng-mouseleave="hoverIn != hoverIn")
 				div(class='caption')
 					span(class="glyphicon glyphicon-heart")
 					| {{ shot.likes_count || 0 }}
