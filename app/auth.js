@@ -1,6 +1,6 @@
 'use strict';
 
-var client_id = 'd91d0cc0171bcec0a272770480fa1c30a66d5bc095c5929b3bf0601ab7fbed1a';
+var client_id = '251eccbc923c4d792366411d7587058eb2a4527dc7fcf2380879172479106e6f';
 var client_secret = '1ac7508f9ebe7f6081a029bdb09c72d68f234da850fe2e80712d73767aee786c';
 var authorize_url = 'https://dribbble.com/oauth/authorize?client_id=';
 var token_url = 'https://dribbble.com/oauth/token';
