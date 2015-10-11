@@ -6,7 +6,7 @@ angular.module('Details', ['ngRoute'])
 	$scope.shot = shot;
 	
 	if (typeof $scope.shot.description === 'string')
-		$scope.shot.description = $sce.trustAsHtml($scope.shot.description);
+		$scope.shot.parsedDescription = $sce.trustAsHtml($scope.shot.description);
 	else
-		$scope.shot.description = '';
+		$scope.shot.parsedDescription = '';
 });

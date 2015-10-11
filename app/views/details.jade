@@ -7,4 +7,4 @@ div(class='container details')
 		img(ng-src="{{ shot.user.avatar_url }}" class="img-circle")
 		span {{ shot.user.name }}
 	div(class='description')
-		span(ng-bind-html='shot.description')
+		span(ng-bind-html='shot.parsedDescription')
