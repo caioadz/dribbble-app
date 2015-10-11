@@ -7,11 +7,7 @@ angular.module('Dribbble', [])
 
 .factory('ShotsResource', function ($resource) {
 	return $resource(BuildUrl('/shots/:id'), {}, {
-		query: {
-			method: 'GET',
-			isArray: true,
-			cache: true
-		}
+		query: { method:'GET', isArray: true, cache: true }
 	});
 });
 
