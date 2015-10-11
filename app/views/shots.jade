@@ -14,7 +14,3 @@ block content
 					| {{ shot.views || 0 }}
 					span(class="glyphicon glyphicon-comment")
 					| {{ shot.comments || 0 }}
-	
-	//Signin				
-	div(ng-controller='AuthCtrl' ng-show='!authenticated')
-		include ./error/401.jade
