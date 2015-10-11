@@ -2,7 +2,7 @@ div(class='container details')
 	div(class='title')
 		h3 {{ shot.title }}
 	div(class='image')
-		img(ng-src="{{ shot.images.hidpi }}" class="img-responsive")
+		img(ng-src="{{ shot.images.hidpi || shot.images.normal }}" class="img-responsive")
 	div(class='author')
 		img(ng-src="{{ shot.user.avatar_url }}" class="img-circle")
 		span {{ shot.user.name }}
