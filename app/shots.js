@@ -3,6 +3,8 @@
 angular.module('Shots', ['ngRoute'])
 
 .controller('ShotsCtrl', function(ShotsResource, $scope, $uibModal) {
+	$scope.page = 1;
+	
 	$scope.shots = [];
 	
 	/*$scope.shots.push({
@@ -22,11 +24,11 @@ angular.module('Shots', ['ngRoute'])
 		},
 	});*/
 	
-	ShotsResource.query().$promise.then(function(data) {
+	ShotsResource.query({page: $scope.page}).$promise.then(function(data) {
 		$scope.shots = data;
 	});
 	
-	$scope.openModal = function (index) {
+	$scope.showDetails = function (index) {
 		$uibModal.open({
 			templateUrl: 'details',
 			size: 'details',
@@ -36,6 +38,14 @@ angular.module('Shots', ['ngRoute'])
 					return $scope.shots[index];
 				}
 			}
+		});
+	}
+	
+	$scope.loadMore = function () {
+		$scope.page += 1;
+		ShotsResource.query({page: $scope.page}).$promise.then(function (data) {
+			for (var key in data)
+				$scope.shots.push(data[key]);
 		});
 	}
 });

@@ -5,9 +5,8 @@ block content
 	//Most popular shots	
 	div(ng-controller='ShotsCtrl')
 		div(class='col-sm-2' ng-repeat='shot in shots' ng-cloak)
-			a(ng-click='openModal($index)' class='thumbnail')
-				img(ng-src='{{ shot.images.teaser }}' ng-show='!hoverIn' ng-mouseover="hoverIn != hoverIn")
-				img(ng-src='{{ shot.images.normal }}' ng-show='hoverIn' ng-mouseleave="hoverIn != hoverIn")
+			a(ng-click='showDetails($index)' class='thumbnail')
+				img(ng-src='{{ shot.images.teaser }}')
 				div(class='caption')
 					span(class="glyphicon glyphicon-heart")
 					| {{ shot.likes_count || 0 }}
@@ -15,3 +14,4 @@ block content
 					| {{ shot.views_count || 0 }}
 					span(class="glyphicon glyphicon-comment")
 					| {{ shot.comments_count || 0 }}
+		button(class='btn-primary btn-block btn' ng-click='loadMore()') More
