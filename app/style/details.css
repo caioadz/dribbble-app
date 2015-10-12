@@ -23,5 +23,5 @@ div .details .author {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 .modal-details {
-    width: 440px;
+    max-width: 440px;
 }
