@@ -24,3 +24,9 @@ div .col-sm-2 {
 .more {
     padding-bottom: 20px;
 }
+@media (min-width: 400px)
+{
+    .col-sm-2 {
+        width: 16.66666667%;
+    }
+}
