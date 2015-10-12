@@ -14,4 +14,5 @@ block content
 					| {{ shot.views_count || 0 }}
 					span(class="glyphicon glyphicon-comment")
 					| {{ shot.comments_count || 0 }}
-		button(class='btn-primary btn-block btn more' ng-click='loadMore()') More
+		div(class='more')
+			button(class='btn-primary btn-block btn' ng-click='loadMore()') More

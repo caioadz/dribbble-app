@@ -18,6 +18,6 @@ body {
 div .col-sm-2 {
     min-width: 160px;
 }
-button .more {
+.more {
     padding-bottom: 50px;
 }
