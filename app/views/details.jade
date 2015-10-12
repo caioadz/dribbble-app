@@ -8,3 +8,4 @@ div(class='container details')
 		span {{ shot.user.name }}
 	div(class='description')
 		span(ng-bind-html='shot.parsedDescription')
+	button(ng-click='$close()')
