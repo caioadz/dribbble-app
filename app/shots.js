@@ -24,7 +24,7 @@ angular.module('Shots', ['ngRoute'])
 		},
 	});*/
 	
-	ShotsResource.query({page: $scope.page}).$promise.then(function(data) {
+	ShotsResource.query({ page: $scope.page }).$promise.then(function(data) {
 		$scope.shots = data;
 	});
 	
@@ -43,7 +43,7 @@ angular.module('Shots', ['ngRoute'])
 	
 	$scope.loadMore = function () {
 		$scope.page += 1;
-		ShotsResource.query({page: $scope.page}).$promise.then(function (data) {
+		ShotsResource.query({ page: $scope.page, per_page: 12 }).$promise.then(function (data) {
 			for (var key in data)
 			{
 				if (data[key])
