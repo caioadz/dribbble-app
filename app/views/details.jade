@@ -1,4 +1,6 @@
 div(class='container details')
+	button(class='close' ng-click='$close()')
+		span(aria-hidden='true') ×
 	div(class='title')
 		h3 {{ shot.title }}
 	div(class='image')
@@ -8,4 +10,3 @@ div(class='container details')
 		span {{ shot.user.name }}
 	div(class='description')
 		span(ng-bind-html='shot.parsedDescription')
-	button(ng-click='$close()')

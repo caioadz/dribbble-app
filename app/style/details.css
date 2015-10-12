@@ -3,6 +3,9 @@
     padding-top: 20px;
     padding-bottom: 40px;
 }
+div .details {
+    max-width: 100%;
+}
 div .details .author {
     padding-top: 20px;
     padding-left: 10px;
