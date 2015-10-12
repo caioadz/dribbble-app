@@ -45,7 +45,10 @@ angular.module('Shots', ['ngRoute'])
 		$scope.page += 1;
 		ShotsResource.query({page: $scope.page}).$promise.then(function (data) {
 			for (var key in data)
-				$scope.shots.push(data[key]);
+			{
+				if (data[key])
+					$scope.shots.push(data[key]);
+			}
 		});
 	}
 });
