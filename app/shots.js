@@ -46,7 +46,7 @@ angular.module('Shots', ['ngRoute'])
 		ShotsResource.query({ page: $scope.page, per_page: 12 }).$promise.then(function (data) {
 			for (var key in data)
 			{
-				if (data[key])
+				if (!isNaN(key))
 					$scope.shots.push(data[key]);
 			}
 		});
