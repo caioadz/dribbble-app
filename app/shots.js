@@ -35,7 +35,7 @@ angular.module('Shots', ['ngRoute'])
 				if (!isNaN(key))
 					$scope.shots.push(data[key]);
 			}
-			$scope.loading = true;
+			$scope.loading = false;
 		});
 	}
 });
