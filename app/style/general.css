@@ -24,7 +24,7 @@ body {
   display: none !important;
 }
 div .col-sm-2 {
-    min-width: 200px;
+    min-width: 190px;
 }
 .more {
     padding-bottom: 20px;
