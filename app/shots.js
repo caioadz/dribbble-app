@@ -26,7 +26,7 @@ angular.module('Shots', ['ngRoute'])
 	
 	$scope.loadMore = function () {
 		$scope.page += 1;
-		ShotsResource.query({ page: $scope.page, per_page: 15 }).$promise.then(function (data) {
+		ShotsResource.query({ page: $scope.page, per_page: 12 }).$promise.then(function (data) {
 			for (var key in data)
 			{
 				if (!isNaN(key))
