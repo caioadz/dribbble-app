@@ -4,11 +4,12 @@ angular.module('Shots', ['ngRoute'])
 
 .controller('ShotsCtrl', function(ShotsResource, $scope, $uibModal) {
 	$scope.page = 1;
-	
-	$scope.shots = [];
+	$scope.shots = [];	
+	$scope.loading = true;
 	
 	ShotsResource.query({ page: $scope.page }).$promise.then(function(data) {
 		$scope.shots = data;
+		$scope.loading = false;
 	});
 	
 	$scope.showDetails = function (index) {
@@ -26,12 +27,15 @@ angular.module('Shots', ['ngRoute'])
 	
 	$scope.loadMore = function () {
 		$scope.page += 1;
+		$scope.loading = true;
+		
 		ShotsResource.query({ page: $scope.page, per_page: 12 }).$promise.then(function (data) {
 			for (var key in data)
 			{
 				if (!isNaN(key))
 					$scope.shots.push(data[key]);
 			}
+			$scope.loading = true;
 		});
 	}
 });
