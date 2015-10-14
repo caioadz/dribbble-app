@@ -6,7 +6,7 @@ var api_url = '//api.dribbble.com/v1{relative_url}?access_token=' + client_id;
 angular.module('Dribbble', [])
 
 .factory('ShotsResource', function ($resource) {
-	return $resource(BuildUrl('/shots/:id'), { per_page: 30 }, {
+	return $resource(BuildUrl('/shots/:id'), { callback: "JSON_CALLBACK", per_page: 30 }, {
 		query: { method:'GET', isArray: true, cache: true }
 	});
 });
