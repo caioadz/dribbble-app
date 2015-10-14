@@ -2,8 +2,9 @@
 
 angular.module('Shots', ['ngRoute'])
 
-.controller('ShotsCtrl', function(ShotsResource, $scope, $uibModal) {
+.controller('ShotsCtrl', function(ShotsResource, $scope, $uibModal, $http) {
 	$http.defaults.headers.common['Origin']= 'http://dribbble-app.herokuapp.com';
+	
 	$scope.page = 1;
 	$scope.shots = [];	
 	$scope.loading = true;
