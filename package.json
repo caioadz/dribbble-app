@@ -1,7 +1,7 @@
 {
   "name": "dribble-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "Consuming Dribbble API with AngularJS",
   "main": "server.js",
   "dependencies": {
     "express": "^4.13.3",
